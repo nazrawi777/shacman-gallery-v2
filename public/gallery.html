@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Grade 1 Construction Company - Explore our portfolio of iconic high-rise buildings, luxury villas, commercial complexes, and sustainable infrastructure projects.">
+  <meta name="keywords" content="construction, grade 1 contractor, high-rise buildings, commercial construction, sustainable building, infrastructure, luxury villas, hotels, hospitals">
+  <meta name="author" content="Grade 1 Construction">
+  <meta name="robots" content="index, follow">
+  
+  <title>Projects Gallery | Grade 1 Construction Excellence</title>
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="./gallery.html">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Projects Gallery | Grade 1 Construction Excellence">
+  <meta property="og:description" content="Explore our portfolio of iconic construction projects - from towering skyscrapers to sustainable green buildings.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/og-image.jpg">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Projects Gallery | Grade 1 Construction Excellence">
+  <meta name="twitter:description" content="Explore our portfolio of iconic construction projects.">
+  <meta name="twitter:image" content="assets/images/og-image.jpg">
+  
+  <!-- Preconnect for fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Fonts: Orbitron (display) + Inter (body) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/gallery.css">
+  
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Grade 1 Construction Projects Gallery",
+    "description": "Portfolio of Grade 1 construction projects including high-rise buildings, luxury villas, commercial complexes, healthcare facilities, and sustainable infrastructure.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Grade 1 Construction",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "assets/images/logo.png"
+      }
+    },
+    "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "CreativeWork",
+            "name": "Skyline Tower One",
+            "description": "85-story glass skyscraper in Dubai with cyan LED accents"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "CreativeWork",
+            "name": "The Helix Tower",
+            "description": "Iconic twisted spiral skyscraper in Tokyo"
+          }
+        }
+      ]
+    }
+  }
+  </script>
+</head>
+<body>
+  <!-- Skip to main content link for accessibility -->
+  <a href="#main-content" class="sr-only" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to main content</a>
+  
+  <!-- Ambient Background Glow -->
+  <div class="ambient-glow" aria-hidden="true"></div>
+  
+  <!-- Main Content -->
+  <main id="main-content" class="container" style="position:relative;z-index:10;padding-top:2rem;padding-bottom:4rem;">
+    
+    <!-- Header -->
+    <header class="gallery-header">
+      <h1 class="gallery-title text-gradient">Our Projects</h1>
+      <p class="gallery-subtitle">
+        Explore our portfolio of Grade 1 construction excellence — from iconic skyscrapers to sustainable innovations.
+      </p>
+    </header>
+    
+    <!-- Filter Bar -->
+    <nav class="filter-bar" role="navigation" aria-label="Project category filters">
+      <div class="filter-container">
+        <button 
+          id="filter-scroll-left" 
+          class="filter-scroll-btn" 
+          aria-label="Scroll filters left"
+          tabindex="-1"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+        </button>
+        
+        <div id="filter-list" class="filter-list" role="tablist" aria-label="Filter by category">
+          <!-- Filter buttons rendered by JS -->
+        </div>
+        
+        <button 
+          id="filter-scroll-right" 
+          class="filter-scroll-btn" 
+          aria-label="Scroll filters right"
+          tabindex="-1"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+        </button>
+      </div>
+    </nav>
+    
+    <!-- Gallery Grid -->
+    <section id="gallery-grid" class="gallery-grid" role="tabpanel" aria-label="Project gallery">
+      <!-- Project cards rendered by JS -->
+    </section>
+    
+    <!-- Load More -->
+    <div id="load-more-container" class="load-more-container">
+      <button id="load-more-btn" class="load-more-btn">
+        Load More Projects
+      </button>
+    </div>
+    
+    <!-- Results Count -->
+    <p id="results-count" class="results-count" aria-live="polite"></p>
+    
+  </main>
+  
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Project gallery viewer">
+    <!-- Lightbox content rendered by JS -->
+  </div>
+  
+  <!-- Footer -->
+  <footer class="gallery-footer">
+    <div class="container">
+      <p>&copy; 2024 Grade 1 Construction. All rights reserved.</p>
+    </div>
+  </footer>
+  
+  <!-- Scripts -->
+  <script src="assets/js/gallery.js"></script>
+  
+  <!-- No-JS Fallback -->
+  <noscript>
+    <style>
+      .filter-bar, .load-more-container { display: none !important; }
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1.5rem;
+      }
+      .project-card { cursor: default; }
+      .card-overlay { display: none; }
+    </style>
+    <div class="container" style="padding: 2rem;">
+      <p style="text-align: center; color: var(--muted-foreground);">
+        JavaScript is required for full gallery functionality. 
+        <a href="#gallery-grid" style="color: var(--primary);">View all projects below</a>.
+      </p>
+    </div>
+  </noscript>
+</body>
+</html>
