@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="dark">
 <head>
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Grade 1 Construction Company - Explore our portfolio of iconic high-rise buildings, luxury villas, commercial complexes, and sustainable infrastructure projects.">
@@ -11,6 +12,17 @@
   <!-- Canonical URL -->
   <link rel="canonical" href="./index.html">
   <!-- Open Graph -->
+     
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/assets/images/photo_2025-12-24_08-08-11-removebg-preview.png">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
   <meta property="og:title" content="Projects Gallery | Grade 1 Construction Excellence">
   <meta property="og:description" content="Explore our portfolio of iconic construction projects - from towering skyscrapers to sustainable green buildings.">
   <meta property="og:type" content="website">
@@ -23,8 +35,6 @@
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="/assets/images/photo_2025-12-24_08-08-11-removebg-preview.png">
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="assets/css/gallery.css">
-  
     <style>
         /* Navigation arrows */
 .lightbox-nav {
@@ -114,48 +124,8 @@
 }
 
     </style>
-  
-  <!-- JSON-LD Structured Data 598 -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "name": "Grade 1 Construction Projects Gallery",
-    "description": "Portfolio of Grade 1 construction projects including high-rise buildings, luxury villas, commercial complexes, healthcare facilities, and sustainable infrastructure.",
-    "publisher": {
-      "@type": "Organization",
-      "name": "Grade 1 Construction",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "assets/images/logo.png"
-      }
-    },
-    "mainEntity": {
-      "@type": "ItemList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "item": {
-            "@type": "CreativeWork",
-            "name": "Skyline Tower One",
-            "description": "85-story glass skyscraper in Dubai with cyan LED accents"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "item": {
-            "@type": "CreativeWork",
-            "name": "The Helix Tower",
-            "description": "Iconic twisted spiral skyscraper in Tokyo"
-          }
-        }
-      ]
-    }
-  }
-  </script>
 </head>
+  
 <body>
  
   <a href="#main-content" class="sr-only" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to main content</a>
@@ -175,81 +145,45 @@
   </header>
         </div><!-- /.stricky-header -->
 
-  <main id="main-content" class="container222" style="position:relative;z-index:10;bottom:100px;">
-    
 
-    <h1>Our Gallery</h1>
-    <!-- Filter Bar -->
-    <nav class="filter-bar" role="navigation" aria-label="Project category filters">
-      <div class="filter-container">
-        <button 
-          id="filter-scroll-left" 
-          class="filter-scroll-btn" 
-          aria-label="Scroll filters left"
-          tabindex="-1"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
-        </button>
-        
-        <div id="filter-list" class="filter-list" role="tablist" aria-label="Filter by category">
-          <!-- Filter buttons rendered by JS -->
-        </div>
-        
-        <button 
-          id="filter-scroll-right" 
-          class="filter-scroll-btn" 
-          aria-label="Scroll filters right"
-          tabindex="-1"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+  <main class="container">
+    <!-- Header -->
+    <header class="header">
+      <h1 class="gradient-text">Video Gallery</h1>
+    </header>
+
+    <!-- Gallery Section -->
+    <section aria-label="Video Gallery">
+      <!-- Video Grid -->
+      <div id="video-grid" class="video-grid"></div>
+
+      <!-- Show More Button -->
+      <div id="show-more-container" class="show-more-container">
+        <button id="show-more-btn" class="btn-glow glass" aria-label="Show more videos">
+          <span>Show More</span>
+          <span id="remaining-count" class="remaining">(12 remaining)</span>
+          <span class="chevron"></span>
         </button>
       </div>
-    </nav>
-    
-    <!-- Gallery Grid -->
-    <section id="gallery-grid" class="gallery-grid" role="tabpanel" aria-label="Project gallery">
-      <!-- Project cards rendered by JS -->
     </section>
-    
-    <!-- Load More -->
-    <div id="load-more-container" class="load-more-container">
-      <button id="load-more-btn" class="load-more-btn">
-        Load More Projects
-      </button>
-    </div>
-    
-    <!-- Results Count -->
-    <p id="results-count" class="results-count" aria-live="polite"></p>
-    
+
+
   </main>
-  
-  <!-- Lightbox Modal -->
-  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Project gallery viewer">
-    <!-- Lightbox content rendered by JS -->
+
+  <!-- Modal -->
+  <div id="modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-content glass-strong">
+      <div class="modal-header">
+        <h2 id="modal-title">Video Title</h2>
+        <button id="close-btn" class="close-btn" aria-label="Close modal"></button>
+      </div>
+      <div id="video-container" class="video-container"></div>
+    </div>
   </div>
 
-  
   <!-- Scripts -->
-  <script src="assets/js/gallery.js"></script>
-  
-  <!-- No-JS Fallback -->
-  <noscript>
-    <style>
-      .filter-bar, .load-more-container { display: none !important; }
-      .gallery-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-        gap: 1.5rem;
-      }
-      .project-card { cursor: default; }
-      .card-overlay { display: none; }
-    </style>
-    <div class="container222" style="padding: 2rem;">
-      <p style="text-align: center; color: var(--muted-foreground);">
-        JavaScript is required for full gallery functionality. 
-        <a href="#gallery-grid" style="color: var(--primary);">View all projects below</a>.
-      </p>
-    </div>
-  </noscript>
+  <script src="app.js"></script>
 </body>
 </html>
+
+
