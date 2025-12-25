@@ -427,14 +427,13 @@ button:focus:not(:focus-visible) {
 
 .modal-content {
   position: relative;
-  width: 100%;
-  max-width: 54rem;
-  border-radius: 1rem;
-  overflow: hidden;
+  width: 95%;          /* Better for mobile */
+  max-width: 55rem;    /* Decreased width = Decreased height */
+  background: #0f172a;
+  border-radius: 1.25rem;
+  overflow: visible;   /* Prevents cutting off mobile bars */
   transform: scale(0.9) translateY(20px);
-  opacity: 0;
-  transition: transform var(--duration-normal) var(--ease-out-expo),
-              opacity var(--duration-normal) ease;
+  transition: transform 0.4s var(--ease-out-expo);
 }
 
 .modal-backdrop.open .modal-content {
@@ -498,6 +497,10 @@ button:focus:not(:focus-visible) {
   position: relative;
   aspect-ratio: 16 / 9;
   background: black;
+  border-bottom-left-radius: 1.25rem;
+  border-bottom-right-radius: 1.25rem;
+  overflow: hidden;
+  min-height: 220px; /* IMPORTANT: Forces YouTube to show the settings gear on mobile */
 }
 
 .video-container iframe {

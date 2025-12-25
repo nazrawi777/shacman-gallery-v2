@@ -11,8 +11,8 @@ const videos = [
   { id: "upN1PFXGbO4", title: "Gallery Video 09", thumbnail: "https://img.youtube.com/vi/upN1PFXGbO4/maxresdefault.jpg" },
   { id: "uRnvOLv-7Zw", title: "Gallery Video 10", thumbnail: "https://img.youtube.com/vi/uRnvOLv-7Zw/maxresdefault.jpg" },
   { id: "cmv1ebv33WU", title: "Gallery Video 11", thumbnail: "https://img.youtube.com/vi/cmv1ebv33WU/maxresdefault.jpg" },
-  { id: "n-ldbe6Rk9I", title: "Gallery Video 12", thumbnail: "https://img.youtube.com/vi/n-ldbe6Rk9I/maxresdefault.jpg" },
-  { id: "Rf3_DU3Ej2M", title: "Gallery Video 13", thumbnail: "https://img.youtube.com/vi/Rf3_DU3Ej2M/maxresdefault.jpg" },
+  { id: "n-ldbe6Rk9I", title: "Gallery Video 12", thumbnail: "https://img.youtube.com/vi/n-ldbe6Rk9I/hqdefault.jpg" },
+  { id: "Rf3_DU3Ej2M", title: "Gallery Video 13", thumbnail: "https://img.youtube.com/vi/Rf3_DU3Ej2M/hqdefault.jpg" },
   { id: "T_Z6BXn0tHs", title: "Gallery Video 14", thumbnail: "https://img.youtube.com/vi/T_Z6BXn0tHs/maxresdefault.jpg" },
   { id: "onHZnoZxtUs", title: "Gallery Video 15", thumbnail: "https://img.youtube.com/vi/onHZnoZxtUs/maxresdefault.jpg" },
   { id: "tuPgRlT4-G4", title: "Gallery Video 16", thumbnail: "https://img.youtube.com/vi/tuPgRlT4-G4/maxresdefault.jpg" },
@@ -121,8 +121,16 @@ function createThumbnailCard(video, index) {
 
   const img = button.querySelector('.thumbnail-img');
   img.addEventListener('load', () => img.classList.add('loaded'));
-  img.addEventListener('error', () => {
-    if (img.src.includes('maxresdefault')) img.src = img.src.replace('maxresdefault', 'hqdefault');
+  
+  img.addEventListener('error', function() {
+    // If maxres fails, try hqdefault (High Quality)
+    if (this.src.includes('maxresdefault')) {
+      this.src = this.src.replace('maxresdefault', 'hqdefault');
+    } 
+    // If hqdefault fails, try mqdefault (Medium Quality - always exists)
+    else if (this.src.includes('hqdefault')) {
+      this.src = this.src.replace('hqdefault', 'mqdefault');
+    }
   });
 
   button.addEventListener('click', () => {
