@@ -18,7 +18,9 @@ const videos = [
   { id: "tuPgRlT4-G4", title: "Gallery Video 16", thumbnail: "https://img.youtube.com/vi/tuPgRlT4-G4/maxresdefault.jpg" },
   { id: "nhWKt3RY1Hc", title: "Gallery Video 17", thumbnail: "https://img.youtube.com/vi/nhWKt3RY1Hc/maxresdefault.jpg" },
   { id: "N3Jy7AvcVaQ", title: "Gallery Video 18", thumbnail: "https://img.youtube.com/vi/N3Jy7AvcVaQ/maxresdefault.jpg" },
-  { id: "dg5z0XtIrC4", title: "Gallery Video 19", thumbnail: "https://img.youtube.com/vi/dg5z0XtIrC4/maxresdefault.jpg" }
+  { id: "dg5z0XtIrC4", title: "Gallery Video 19", thumbnail: "https://img.youtube.com/vi/dg5z0XtIrC4/maxresdefault.jpg" },
+{ id: "ABWA5hfX31c", title: "Shacman Company Profile", thumbnail: "https://img.youtube.com/vi/ABWA5hfX31c/hqdefault.jpg" }
+];
 ];
 
 const INITIAL_VISIBLE_COUNT = 12;
