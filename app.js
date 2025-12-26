@@ -1,6 +1,5 @@
 const videos = [
   { id: "POzxZDF1NmA", title: "Shacman Introduction", thumbnail: "https://img.youtube.com/vi/POzxZDF1NmA/maxresdefault.jpg" },
-  { id: "obA4O3NXWtU", title: "SHACMAN INTRODUCTION", thumbnail: "https://img.youtube.com/vi/obA4O3NXWtU/maxresdefault.jpg" },
   { id: "N3Jy7AvcVaQ", title: "X3000 PLATFORM INTRODUCTION ", thumbnail: "https://img.youtube.com/vi/N3Jy7AvcVaQ/maxresdefault.jpg" },
   { id: "83ZuCOB7-84", title: "X3000 DUMP TRUCK", thumbnail: "https://img.youtube.com/vi/83ZuCOB7-84/maxresdefault.jpg" },
   { id: "AcN_B_53qaQ", title: "X3000 CARGO CHASSIS", thumbnail: "https://img.youtube.com/vi/AcN_B_53qaQ/maxresdefault.jpg" },
