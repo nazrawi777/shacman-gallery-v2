@@ -21,7 +21,7 @@ const videos = [
   { id: "dg5z0XtIrC4", title: "Gallery Video 19", thumbnail: "https://img.youtube.com/vi/dg5z0XtIrC4/maxresdefault.jpg" },
 { id: "ABWA5hfX31c", title: "Shacman Company Profile", thumbnail: "https://img.youtube.com/vi/ABWA5hfX31c/hqdefault.jpg" }
 ];
-];
+
 
 const INITIAL_VISIBLE_COUNT = 12;
 const LOAD_MORE_COUNT = 6;
